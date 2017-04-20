@@ -1,0 +1,13 @@
+SRC=./src
+
+CC=cl
+CFLAGS=-W2 -O1
+
+.PHONY: projc.exe clean FORCE
+FORCE:
+
+projc.exe: FORCE
+	$(CC) -o projc.exe $(SRC)/projc.c $(CFLAGS)
+
+clean:
+	del *.obj *.o 
